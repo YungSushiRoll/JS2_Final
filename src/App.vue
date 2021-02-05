@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <NavBar/>
+    <router-view/>
+    <Footer/>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/NavBar.vue'
+import Footer from './components/Footer.vue'
 
 export default {
+  data() {
+    return {
+      // username: "",
+    }
+  },
   name: 'App',
   components: {
-    HelloWorld
+    NavBar,
+    Footer,
+  },
+  methods: {
+    // updateName(username) {
+    //   alert(username + "app");
+    // }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
+  #app
+  {
+    font-family: Unica One;
+    font-size: 20px;
+  }
 </style>
